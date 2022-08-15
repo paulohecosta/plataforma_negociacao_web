@@ -1,0 +1,34 @@
+// COLORS
+$white: white;
+// GLOBAL
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+// LAYOUT OVERRIDE
+.ant-layout {
+    background: $white;
+    
+    .ant-layout-header {
+        background: $white;
+        padding: 0;
+        width: 100%;
+        box-shadow: rgb(235, 235, 235) 0px 5px 10px;
+        
+        .ant-layout-header-body {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ant-menu {
+            border-bottom: 0px solid;
+        }
+
+        .ant-menu-item {
+            margin-top: -2px;
+        }
+    }
+    .ant-layout-footer {
+        background: $white;
+    }
+}
