@@ -50,7 +50,13 @@ const columns = [
       return a.type.length - b.type.length
     },
     sortDirections: ['descend'],
-  }
+  },
+  {
+    title: 'Ações',
+    dataIndex: '',
+    key: 'x',
+    render: (a) => <Button href={`/products/giro?cnpj=${a.customer_id}&id=${a.proposal_id}`}>Retomar</Button>,
+  },
 ];
 
 const NegotiationTableComp = (data) => {

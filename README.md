@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 ## Deploy
-aws s3 cp build s3://371716203543-plat-web.com -recursive --profile personal
+aws s3 cp build s3://371716203543-plat-web.com --recursive --profile personal

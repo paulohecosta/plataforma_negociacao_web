@@ -5,6 +5,7 @@ const ServiceContext = createContext({});
 const ServiceProvider = ({ children }) => {
 
   const [myNegotiations, setMyNegotiations] = useState();
+  const [myCurrentGiro, setMyCurrentGiro] = useState();
   const [myTasks, setMyTasks] = useState();
   const [myCurrentCustomer, setMyCurrentCustomer] = useState();
   const [myCurrentCustomerNegs, setMyCurrentCustomerNegs] = useState();
@@ -13,6 +14,12 @@ const ServiceProvider = ({ children }) => {
     fetch(`https://${process.env.REACT_APP_API_ID}.execute-api.us-east-2.amazonaws.com/dev/negotiations`)
       .then(response => response.json())
       .then(data => setMyNegotiations(data));
+  };
+
+  const loadMyCurrentGiro = async (id) => {
+    fetch(`https://${process.env.REACT_APP_API_ID}.execute-api.us-east-2.amazonaws.com/dev/products/giro/proposals/${id}`)
+      .then(response => response.json())
+      .then(data => setMyCurrentGiro(data));
   };
 
   const loadMyTasks = async () => {
@@ -58,6 +65,8 @@ const ServiceProvider = ({ children }) => {
       value={{
         myNegotiations,
         loadMyNegotiations,
+        myCurrentGiro,
+        loadMyCurrentGiro,
         myCurrentCustomer,
         loadMyCurrentCustomer,
         createNewGiroProposal,
