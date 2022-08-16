@@ -63,7 +63,10 @@ const HomeView = () => {
               <br/>
               {
                 customerNegs ? 
-                <NegotiationTableComp data={customerNegs}></NegotiationTableComp>
+                <div>
+                  <p>Negociações abertas:</p>
+                  <NegotiationTableComp data={customerNegs}></NegotiationTableComp>
+                </div>
                 :
                 <></>
               }

@@ -32,3 +32,18 @@ $white: white;
         background: $white;
     }
 }
+
+.ant-btn-primary {
+    background: #FF7200;
+    border-color: #FF7200;
+
+    &:hover, &:focus {
+        background: #F79C60;
+        border-color: #F79C60;
+    }
+}
+
+.ant-menu-submenu-selected {
+    color: #FF7200 !important;
+    border-bottom: 2px solid #FF7200 !important;
+}

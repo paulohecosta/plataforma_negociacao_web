@@ -20,7 +20,7 @@ const MemberLayout = ({ children }) => {
           <Menu mode="horizontal" defaultSelectedKeys={[location.pathname]}>
           <Menu.SubMenu title="Home">
               <Menu.Item key={RPATHS.HOME} onClick={()=>changePath(RPATHS.HOME)}>Nova Negociação</Menu.Item>
-              <Menu.Item>Tarefas</Menu.Item>
+              <Menu.Item key={RPATHS.TASKS} onClick={()=>changePath(RPATHS.TASKS)}>Tarefas</Menu.Item>
             </Menu.SubMenu>
             <Menu.SubMenu title="Negociações">
               <Menu.Item key={RPATHS.NEGOTATIONS} onClick={()=>changePath(RPATHS.NEGOTATIONS)}>Negociações</Menu.Item>
@@ -37,7 +37,7 @@ const MemberLayout = ({ children }) => {
       <Content style={{ minWidth: 1128, alignSelf: 'center', margin: '24px 0' }}>
         {children}
       </Content>
-      <Footer style={{ textAlign: 'center' }}>Paulo Costa ©2021</Footer>
+      <Footer style={{ textAlign: 'center' }}>Footer :)</Footer>
     </Layout>
   )
 }

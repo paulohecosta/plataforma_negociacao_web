@@ -24,39 +24,40 @@ const columns = [
     title: 'Produto',
     dataIndex: 'product_name',
     key: 'product_name',
-  },
-  {
-    title: 'Modalidade',
-    dataIndex: 'type',
-    key: 'type',
     filters: [
       {
-        text: 'CURTO',
-        value: 'CURTO',
+        text: 'GIRO',
+        value: 'GIRO',
       },
       {
-        text: 'MEDIO',
-        value: 'MEDIO',
-      },
-      {
-        text: 'LONGO',
-        value: 'LONGO',
+        text: 'CESSÃO CREDITO',
+        value: 'CESSÃO CREDITO',
       },
     ],
     onFilter: (value, record) => {
-      return record.type.indexOf(value) === 0;
+      return record.product_name.indexOf(value) === 0;
     },
     sorter: (a, b) => {
-      return a.type.length - b.type.length
+      return a.product_name.length - b.product_name.length
     },
     sortDirections: ['descend'],
+  },
+  {
+    title: 'Tarefa',
+    dataIndex: 'task_type',
+    key: 'task_type',
+  },
+  {
+    title: 'Descrição',
+    dataIndex: 'task_message',
+    key: 'task_message',
   }
 ];
 
-const NegotiationTableComp = (data) => {
+const TaskTableComp = (data) => {
   return (
     <Table columns={columns} dataSource={data.data} />
   )
 }
 
-export default NegotiationTableComp;
+export default TaskTableComp;
