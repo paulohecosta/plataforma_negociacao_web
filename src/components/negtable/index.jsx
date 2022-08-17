@@ -96,6 +96,7 @@ const NegotiationTableComp = (data) => {
       title: 'CNPJ',
       dataIndex: 'customer_id',
       key: 'customer_id',
+      ...getColumnSearchProps('customer_id'),
     },
     {
       title: 'Proposta',

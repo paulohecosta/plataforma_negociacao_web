@@ -56,8 +56,21 @@ const HomeView = () => {
                   Giro
                 </Button>
                 <span> </span>
-                <Button type="primary">
+                <Button type="primary" href={`/products/cessao?cnpj=${customer.customer_id}`}>
                   Cessão de Crédito
+                </Button>
+                <span> </span>
+                <Button type="primary" href={`/products/fianca?cnpj=${customer.customer_id}`}>
+                  Fiança
+                </Button>
+                <span> </span>
+                <Button type="primary" href={`/products/finimp?cnpj=${customer.customer_id}`}>
+                  Finimp
+                </Button>
+                <p><br/></p>
+                <p>Outros Serviços:</p>
+                <Button type="primary">
+                  Convênio
                 </Button>
               </Card>
               <br/>
