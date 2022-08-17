@@ -68,7 +68,7 @@ const GiroProposalView = () => {
   }, [myCurrentGiro]);
 
   return (
-    <Card title="Giro">
+    <Card title="Giro" className="giro-color">
       {
         (customer && customer.name) ?
           <div>

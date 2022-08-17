@@ -26,11 +26,6 @@ const MemberLayout = ({ children }) => {
               <Menu.Item key={RPATHS.TASKS} onClick={()=>changePath(RPATHS.TASKS)}>Tarefas</Menu.Item>
               <Menu.Item>Busca</Menu.Item>
             </Menu.SubMenu>
-            <Menu.SubMenu title="Produtos">
-              <Menu.Item key={RPATHS.GIRO_PROPOSAL} onClick={()=>changePath(RPATHS.GIRO_PROPOSAL)}>Giro</Menu.Item>
-              <Menu.Item>Cessão de Crédito</Menu.Item>
-              <Menu.Item>Convênio</Menu.Item>
-            </Menu.SubMenu>
           </Menu>
         </div>
       </Header>

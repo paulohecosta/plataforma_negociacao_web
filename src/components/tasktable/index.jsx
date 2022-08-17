@@ -46,17 +46,49 @@ const columns = [
     title: 'Tarefa',
     dataIndex: 'task_type',
     key: 'task_type',
+    filters: [
+      {
+        text: 'CREDITO',
+        value: 'CREDITO',
+      },
+      {
+        text: 'GARANTIA',
+        value: 'GARANTIA',
+      },
+    ],
+    onFilter: (value, record) => {
+      return record.task_type.indexOf(value) === 0;
+    },
+    sorter: (a, b) => {
+      return a.task_type.length - b.task_type.length
+    },
+    sortDirections: ['descend'],
   },
   {
     title: 'Descrição',
     dataIndex: 'task_message',
     key: 'task_message',
-  }
+  },
+  {
+    title: 'Ações',
+    dataIndex: '',
+    key: 'x',
+    render: (a) => {
+      if (a.product_name == 'GIRO')
+        return <Button href={`/products/giro?cnpj=${a.customer_id}&id=${a.proposal_id}`}>Retomar</Button>
+      else
+        return <></>
+    },
+  },
 ];
 
 const TaskTableComp = (data) => {
   return (
-    <Table columns={columns} dataSource={data.data} />
+    <>
+      <p>Lista de Tarefas:</p>
+      <Table columns={columns} dataSource={data.data} />
+    </>
+    
   )
 }
 
