@@ -1,10 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Form, Input, Dropdown, Typography, Menu } from 'antd';
-import { CloseCircleFilled } from '@ant-design/icons';
+import { Button, Card, Form, Input } from 'antd';
 import { useService } from '../../hooks/service';
 import NegotiationTableComp from '../../components/negtable';
-const { Paragraph } = Typography;
 
 const layout = {
   labelCol: { span: 4 },
