@@ -102,6 +102,7 @@ const NegotiationTableComp = (data) => {
       title: 'Proposta',
       dataIndex: 'proposal_id',
       key: 'proposal_id',
+      ...getColumnSearchProps('proposal_id'),
     },
     {
       title: 'Status',
