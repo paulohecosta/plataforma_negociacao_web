@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Switch } from 'react-router-dom';
 import Dump from '../components/dump';
 import CessaoProposalView from '../pages/CessaoProposalView';
+import CovenioView from '../pages/ConvenioView';
 import GiroProposalView from '../pages/GiroProposalView';
 import HomeView from '../pages/HomeView';
 import NegotiationsView from '../pages/NegotiationsView';
@@ -18,6 +19,7 @@ export const RPATHS = {
   TASKS: '/tasks',
   GIRO_PROPOSAL: '/products/giro',
   CESSAO_PROPOSAL: '/products/cessao',
+  INSURANCES: '/services/convenio',
   EXPLORE: '/explore',
   LISTS: '/lists'
 }
@@ -30,6 +32,7 @@ const Routes = () => (
     <Route path={RPATHS.TASKS} exact component={TasksView}/>
     <Route path={RPATHS.GIRO_PROPOSAL} component={GiroProposalView}/>
     <Route path={RPATHS.CESSAO_PROPOSAL} component={CessaoProposalView}/>
+    <Route path={RPATHS.INSURANCES} component={CovenioView}/>
     <Route path={RPATHS.EXPLORE} exact component={Dump}/>
     <Route path={RPATHS.LISTS} exact component={Dump}/>
     <Route component={NotFoundView} />

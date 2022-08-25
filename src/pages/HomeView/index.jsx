@@ -67,7 +67,7 @@ const HomeView = () => {
                 </Button>
                 <p><br/></p>
                 <p>Outros Serviços:</p>
-                <Button type="primary">
+                <Button type="primary" href={`/services/convenio?cnpj=${customer.customer_id}`}>
                   Convênio
                 </Button>
               </Card>
